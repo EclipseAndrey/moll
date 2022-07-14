@@ -61,7 +61,7 @@ class AppSettings {
       case Stand.prom:
         return "prom";
       default:
-        return "demo";
+        return "dev";
     }
   }
 }

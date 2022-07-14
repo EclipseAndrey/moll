@@ -22,8 +22,8 @@ class _GeneralScreenState extends State<GeneralScreen> {
       appBar: AppBar(
         centerTitle: false,
         elevation: 0,
-        title: Hero(tag: HeroTags.logo,
-            child: logo(context, size: 28)),
+        title: const Hero(tag: HeroTags.logo,
+            child: logo(size: 28)),
         actions: [
           Center(
             child: Hero(

@@ -36,10 +36,10 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: const [
             Hero(
                 tag: HeroTags.logo,
-                child: logo(context)),
+                child: logo()),
           ],
         ),
       ),
