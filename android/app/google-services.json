@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "871328793305",
+    "project_id": "moll-c095e",
+    "storage_bucket": "moll-c095e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871328793305:android:2307bac6248b14d5cbf4c8",
+        "android_client_info": {
+          "package_name": "com.eclipsedevelop.moll"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871328793305-sd1gtn5ihlvslnj1kmuu30ld7ggnvmb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1OJNYkywVDSXS5_0qP4ASlUA0hJJXYBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871328793305-sd1gtn5ihlvslnj1kmuu30ld7ggnvmb1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
