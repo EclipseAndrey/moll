@@ -26,7 +26,7 @@ class InfoScreen extends StatelessWidget {
                   height: 24,
                 ))),
         title: Hero(
-            tag: HeroTags.info,
+            tag: HeroTags.logo,
             child: Text(
               S.of(context).info,
               style: Theme.of(context).textTheme.headline3,

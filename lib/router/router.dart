@@ -10,7 +10,7 @@ import 'package:moll/ui/pages/splash/splash_screen.dart';
   replaceInRouteName: 'Page,Route,Screen',
   routes: <AutoRoute>[
     AutoRoute(page: SplashScreen, initial: true),
-    AutoRoute(page: InfoScreen,),
+    CupertinoRoute(page: InfoScreen,),
     CustomRoute(page: GeneralScreen, transitionsBuilder: TransitionsBuilders.fadeIn, durationInMilliseconds: 1200, ),
   ],
 )

@@ -28,7 +28,7 @@ class AppRouter extends _i4.RootStackRouter {
           routeData: routeData, child: const _i1.SplashScreen());
     },
     InfoScreenRoute.name: (routeData) {
-      return _i4.MaterialPageX<dynamic>(
+      return _i4.CupertinoPageX<dynamic>(
           routeData: routeData, child: const _i2.InfoScreen());
     },
     GeneralScreenRoute.name: (routeData) {
