@@ -22,11 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "active": MessageLookupByLibrary.simpleMessage("Активно"),
+        "add_device":
+            MessageLookupByLibrary.simpleMessage("Добавить устройство"),
+        "connected": MessageLookupByLibrary.simpleMessage("Подключено"),
         "devices_not_found":
             MessageLookupByLibrary.simpleMessage("Нет доступных устройств"),
+        "disconnected": MessageLookupByLibrary.simpleMessage("Не подключено"),
+        "edit": MessageLookupByLibrary.simpleMessage("Редактировать"),
         "error": MessageLookupByLibrary.simpleMessage("Что-то пошло не так :("),
+        "find": MessageLookupByLibrary.simpleMessage("Поиск устройсв"),
+        "find_desk": MessageLookupByLibrary.simpleMessage(
+            "Найденые устройства появятся здесь"),
         "info": MessageLookupByLibrary.simpleMessage("Инструкция"),
         "moll": MessageLookupByLibrary.simpleMessage("Moll"),
+        "name": MessageLookupByLibrary.simpleMessage("Название"),
+        "pause": MessageLookupByLibrary.simpleMessage("Приостановлено"),
+        "result_devices":
+            MessageLookupByLibrary.simpleMessage("Найденые устройсва"),
+        "results": MessageLookupByLibrary.simpleMessage("Результат"),
         "search_devices":
             MessageLookupByLibrary.simpleMessage("Ищем устройства...")
       };

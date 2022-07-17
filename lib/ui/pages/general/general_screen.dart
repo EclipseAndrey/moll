@@ -5,6 +5,7 @@ import 'package:moll/gen/assets.gen.dart';
 import 'package:moll/router/router.gr.dart';
 import 'package:moll/support/constants/hero_tags.dart';
 import 'package:moll/ui/pages/general/new_connection.dart';
+import 'package:moll/ui/pages/scan/scan_screen.dart';
 import 'package:moll/ui/widgets/clickable_container.dart';
 import 'package:moll/ui/widgets/logo.dart';
 
@@ -16,6 +17,11 @@ class GeneralScreen extends StatefulWidget {
 }
 
 class _GeneralScreenState extends State<GeneralScreen> {
+
+  gotoInfo(){
+    context.router.push(const InfoScreenRoute());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,10 +35,8 @@ class _GeneralScreenState extends State<GeneralScreen> {
             child: Hero(
               tag: HeroTags.info,
               child: ClickableContainer(
-                  child: SvgPicture.asset(Assets.icons.bootstrapIcons19.info),
-                onTap: (){
-                    context.router.push(const InfoScreenRoute());
-                },
+                onTap: gotoInfo,
+                child: SvgPicture.asset(Assets.icons.bootstrapIcons19.info),
               ),
             ),
           ),

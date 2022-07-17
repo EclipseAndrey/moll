@@ -31,6 +31,7 @@ class MollProxy extends HttpOverrides {
     }
 
     HttpClient client = super.createHttpClient(context);
+    // client.maxConnectionsPerHost = 1000;
 
     if(!Platform.isAndroid) {
       /// Подключить прокси (не работает на ведре)

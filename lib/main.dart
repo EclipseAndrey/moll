@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:dart_ping_ios/dart_ping_ios.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -52,6 +53,7 @@ void main() async{
 
   await getIt<AnalyticManager>().start();
 
+  DartPingIOS.register();
 
   runZonedGuarded((){
     runApp(const MollApp());

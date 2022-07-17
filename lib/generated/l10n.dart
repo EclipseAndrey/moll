@@ -99,6 +99,116 @@ class S {
       args: [],
     );
   }
+
+  /// `Добавить устройство`
+  String get add_device {
+    return Intl.message(
+      'Добавить устройство',
+      name: 'add_device',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Поиск устройсв`
+  String get find {
+    return Intl.message(
+      'Поиск устройсв',
+      name: 'find',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Активно`
+  String get active {
+    return Intl.message(
+      'Активно',
+      name: 'active',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Приостановлено`
+  String get pause {
+    return Intl.message(
+      'Приостановлено',
+      name: 'pause',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Найденые устройсва`
+  String get result_devices {
+    return Intl.message(
+      'Найденые устройсва',
+      name: 'result_devices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Результат`
+  String get results {
+    return Intl.message(
+      'Результат',
+      name: 'results',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Подключено`
+  String get connected {
+    return Intl.message(
+      'Подключено',
+      name: 'connected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Не подключено`
+  String get disconnected {
+    return Intl.message(
+      'Не подключено',
+      name: 'disconnected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Название`
+  String get name {
+    return Intl.message(
+      'Название',
+      name: 'name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Найденые устройства появятся здесь`
+  String get find_desk {
+    return Intl.message(
+      'Найденые устройства появятся здесь',
+      name: 'find_desk',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Редактировать`
+  String get edit {
+    return Intl.message(
+      'Редактировать',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
