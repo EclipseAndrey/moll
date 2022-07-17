@@ -34,6 +34,7 @@ class ScanBloc extends Bloc<ScanEvent, ScanState> {
   bool _research = true;
 
   Future<void> startEvent(ScanStartEvent event, Emitter emit) async {
+    _research = true;
     print("scan open");
     await emit.onEach(scanRepository.getScanStream(), onData: (event){
       print("event data ${event.runtimeType}");

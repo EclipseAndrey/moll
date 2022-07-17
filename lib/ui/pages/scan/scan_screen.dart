@@ -23,7 +23,18 @@ class _ScanScreenState extends State<ScanScreen> {
   final GlobalKey<AnimatedListState> _listKey = GlobalKey();
   List<HostItem> hosts = [];
 
+  @override
+  void initState() {
+    BlocProvider.of<ScanBloc>(context).add(ScanStartEvent());
 
+    super.initState();
+  }
+
+  @override
+  void deactivate() {
+    BlocProvider.of<ScanBloc>(context).add(ScanStopEvent());
+    super.deactivate();
+  }
 
   @override
   Widget build(BuildContext context) {
