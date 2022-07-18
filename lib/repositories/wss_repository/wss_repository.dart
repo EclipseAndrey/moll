@@ -26,6 +26,7 @@ class WSSRepository extends WSSRepositoryInterface{
       }
       controller.close();
     });
+    socket.close();
 
 
 
