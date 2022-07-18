@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:moll/bloc/info_host/info_host_bloc.dart';
 import 'package:moll/bloc/new_connect/new_connect_bloc.dart';
 import 'package:moll/bloc/scan/scan_bloc.dart';
 import 'package:moll/generated/l10n.dart';
@@ -58,6 +59,9 @@ class _MollAppState extends State<MollApp>  with WidgetsBindingObserver{
         providers:[
           BlocProvider<NewConnectBloc>(
             create: (context) => NewConnectBloc()..add(NewConnectSearchEvent()),
+          ),
+          BlocProvider<InfoHostBloc>(
+            create: (context) => InfoHostBloc(),
           ),
           BlocProvider<ScanBloc>(
               create: (context) => ScanBloc(scanRepository: _scanRepository)..add(ScanStartEvent())),

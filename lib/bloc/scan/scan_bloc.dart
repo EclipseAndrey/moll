@@ -37,9 +37,10 @@ class ScanBloc extends Bloc<ScanEvent, ScanState> {
     _research = true;
     print("scan open");
     await emit.onEach(scanRepository.getScanStream(), onData: (event){
-      print("event data ${event.runtimeType}");
         if(event is ActiveHost) {
-          add(ScanNewDeviceEvent(hostItem: event));
+          if(event.pingData.error == null) {
+            add(ScanNewDeviceEvent(hostItem: event));
+          }
       }
     });
     await Future.delayed(const Duration(milliseconds: 1500));

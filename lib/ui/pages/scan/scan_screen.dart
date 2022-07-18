@@ -2,10 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:moll/bloc/info_host/info_host_bloc.dart';
 import 'package:moll/bloc/scan/scan_bloc.dart';
 import 'package:moll/gen/assets.gen.dart';
 import 'package:moll/generated/l10n.dart';
 import 'package:moll/models/host_item.dart';
+import 'package:moll/router/router.gr.dart';
 import 'package:moll/support/constants/hero_tags.dart';
 import 'package:moll/support/styles/colors.dart';
 import 'package:moll/support/wrappers/tap_wrapper.dart';
@@ -26,6 +28,9 @@ class _ScanScreenState extends State<ScanScreen> {
   @override
   void initState() {
     BlocProvider.of<ScanBloc>(context).add(ScanStartEvent());
+    if(BlocProvider.of<ScanBloc>(context).state is ScanResultState){
+       (BlocProvider.of<ScanBloc>(context).state as ScanResultState).hosts.forEach((element) {hosts.add(HostItem(ip: element.ip)); });
+    }
 
     super.initState();
   }
@@ -35,6 +40,12 @@ class _ScanScreenState extends State<ScanScreen> {
     BlocProvider.of<ScanBloc>(context).add(ScanStopEvent());
     super.deactivate();
   }
+
+  // @override
+  // void dispose() {
+  //   BlocProvider.of<ScanBloc>(context).add(ScanStopEvent());
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -87,6 +98,11 @@ class _ScanScreenState extends State<ScanScreen> {
                               child: Padding(
                                 padding: const EdgeInsets.only(bottom: 8.0),
                                 child: ClickableContainer(
+                                  onTap: (){
+                                    BlocProvider.of<ScanBloc>(context).add(ScanStopEvent());
+                                    BlocProvider.of<InfoHostBloc>(context).add(InfoHostStartEvent(hosts[index].ip));
+                                    context.router.push(const HostInfoScreenRoute());
+                                  },
                                   child: Row(
                                     children: [
                                       Text(hosts[index].ip, style: Theme.of(context).textTheme.bodyText2,),

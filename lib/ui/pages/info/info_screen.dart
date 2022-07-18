@@ -5,6 +5,12 @@ import 'package:moll/gen/assets.gen.dart';
 import 'package:moll/generated/l10n.dart';
 import 'package:moll/support/constants/hero_tags.dart';
 import 'package:moll/support/wrappers/tap_wrapper.dart';
+import 'package:moll/ui/pages/info/module.dart';
+import 'package:moll/ui/pages/info/texts.dart';
+
+
+
+
 
 class InfoScreen extends StatelessWidget {
   const InfoScreen({Key? key}) : super(key: key);
@@ -38,7 +44,9 @@ class InfoScreen extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const [],
+            children:  [...List.generate(infoItems.length, (index) => InfoModule(body: infoItems[index].body, head: infoItems[index].head),
+            ),
+            ],
           ),
         ),
       ),

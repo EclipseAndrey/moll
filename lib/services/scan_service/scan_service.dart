@@ -13,7 +13,7 @@ class ScanService extends ScanServiceInterface {
     final stream = HostScanner.discover(subnet,
         resultsInIpAscendingOrder: true,
         progressCallback: (progress) {
-      print('Progress for host discovery : $progress');
+      // print('Progress for host discovery : $progress');
     });
     yield* stream;
   }

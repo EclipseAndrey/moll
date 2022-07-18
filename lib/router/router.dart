@@ -3,6 +3,7 @@
 // @CustomAutoRouter              
 import 'package:auto_route/auto_route.dart';
 import 'package:moll/ui/pages/general/general_screen.dart';
+import 'package:moll/ui/pages/host_info/host_info.dart';
 import 'package:moll/ui/pages/info/info_screen.dart';
 import 'package:moll/ui/pages/scan/scan_screen.dart';
 import 'package:moll/ui/pages/splash/splash_screen.dart';
@@ -13,6 +14,7 @@ import 'package:moll/ui/pages/splash/splash_screen.dart';
     AutoRoute(page: SplashScreen, initial: true),
     CupertinoRoute(page: InfoScreen,),
     CupertinoRoute(page: ScanScreen,),
+    CupertinoRoute(page: HostInfoScreen,),
     CustomRoute(page: GeneralScreen, transitionsBuilder: TransitionsBuilders.fadeIn, durationInMilliseconds: 1200, ),
   ],
 )

@@ -14,6 +14,9 @@ class $AssetsIconsGen {
 
   $AssetsIconsBootstrapIcons190Gen get bootstrapIcons19 =>
       const $AssetsIconsBootstrapIcons190Gen();
+
+  /// File path: assets/icons/settings.svg
+  String get settings => 'assets/icons/settings.svg';
 }
 
 class $AssetsIconsBootstrapIcons190Gen {

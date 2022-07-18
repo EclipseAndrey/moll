@@ -1,11 +1,13 @@
 class HostItem{
   final String ip;
+  final String? name;
 
-  HostItem({required this.ip});
+  HostItem({required this.ip, this.name});
+
 
   @override
   String toString() {
-    return 'HostItem{ip: $ip}';
+    return 'HostItem{ip: $ip, name: $name}';
   }
 
   factory HostItem.fromJson(Map<String, dynamic> json) {

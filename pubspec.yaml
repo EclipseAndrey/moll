@@ -65,18 +65,19 @@ dev_dependencies:
     sdk: flutter
 
   auto_route_generator: ^4.2.0
+  #flutter packages pub run build_runner watch
 
   build_runner:
   flutter_gen_runner:
   flutter_lints: ^2.0.0
 
 flutter:
- # assets  fluttergen -c pubspec.yaml
-
+  # export PATH="$PATH":"$HOME/.pub-cache/bin"
+  # fluttergen -c pubspec.yaml
 
   assets:
 #    - assets/images/
-#    - assets/icons/
+    - assets/icons/
     - assets/icons/bootstrap-icons-1.9.0/
 #    - assets/animations/
 #    - assets/certificates/

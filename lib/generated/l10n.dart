@@ -209,6 +209,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Пусто`
+  String get empty {
+    return Intl.message(
+      'Пусто',
+      name: 'empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Проверяем`
+  String get check {
+    return Intl.message(
+      'Проверяем',
+      name: 'check',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Что мы отправляем`
+  String get what_is_sending {
+    return Intl.message(
+      'Что мы отправляем',
+      name: 'what_is_sending',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Это устройство несовместимо с текущей версией приложения. Отправьте нам результат подключений, чтобы мы могли понять, почему вы увидели это устройство в списке, и улучшили систему отбора`
+  String get incompatible {
+    return Intl.message(
+      'Это устройство несовместимо с текущей версией приложения. Отправьте нам результат подключений, чтобы мы могли понять, почему вы увидели это устройство в списке, и улучшили систему отбора',
+      name: 'incompatible',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

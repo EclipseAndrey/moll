@@ -25,15 +25,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "active": MessageLookupByLibrary.simpleMessage("Активно"),
         "add_device":
             MessageLookupByLibrary.simpleMessage("Добавить устройство"),
+        "check": MessageLookupByLibrary.simpleMessage("Проверяем"),
         "connected": MessageLookupByLibrary.simpleMessage("Подключено"),
         "devices_not_found":
             MessageLookupByLibrary.simpleMessage("Нет доступных устройств"),
         "disconnected": MessageLookupByLibrary.simpleMessage("Не подключено"),
         "edit": MessageLookupByLibrary.simpleMessage("Редактировать"),
+        "empty": MessageLookupByLibrary.simpleMessage("Пусто"),
         "error": MessageLookupByLibrary.simpleMessage("Что-то пошло не так :("),
         "find": MessageLookupByLibrary.simpleMessage("Поиск устройсв"),
         "find_desk": MessageLookupByLibrary.simpleMessage(
             "Найденые устройства появятся здесь"),
+        "incompatible": MessageLookupByLibrary.simpleMessage(
+            "Это устройство несовместимо с текущей версией приложения. Отправьте нам результат подключений, чтобы мы могли понять, почему вы увидели это устройство в списке, и улучшили систему отбора"),
         "info": MessageLookupByLibrary.simpleMessage("Инструкция"),
         "moll": MessageLookupByLibrary.simpleMessage("Moll"),
         "name": MessageLookupByLibrary.simpleMessage("Название"),
@@ -42,6 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Найденые устройсва"),
         "results": MessageLookupByLibrary.simpleMessage("Результат"),
         "search_devices":
-            MessageLookupByLibrary.simpleMessage("Ищем устройства...")
+            MessageLookupByLibrary.simpleMessage("Ищем устройства..."),
+        "what_is_sending":
+            MessageLookupByLibrary.simpleMessage("Что мы отправляем")
       };
 }
