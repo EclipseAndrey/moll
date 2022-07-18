@@ -8,6 +8,7 @@ abstract class WSSControllerInterface{
   Future<bool> addHost (String host);
   Stream<HostItem> get stream => behaviorSubject.stream;
   Future<bool> sendCommand(HostItem host, Command command);
+  HostItem? getHostFromIP(String ip);
 
   dispose(){
     behaviorSubject.close();

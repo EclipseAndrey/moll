@@ -67,4 +67,16 @@ class WSSController extends WSSControllerInterface{
 
   }
 
+  @override
+  HostItem? getHostFromIP(String ip) {
+    try {
+      int? index = hosts.indexWhere((element) =>
+      element.ip == ip);
+      return hosts[index];
+    }
+    catch(e){
+      return null;
+    }
+  }
+
 }
