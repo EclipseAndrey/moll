@@ -29,7 +29,9 @@ class _ScanScreenState extends State<ScanScreen> {
   void initState() {
     BlocProvider.of<ScanBloc>(context).add(ScanStartEvent());
     if(BlocProvider.of<ScanBloc>(context).state is ScanResultState){
-       (BlocProvider.of<ScanBloc>(context).state as ScanResultState).hosts.forEach((element) {hosts.add(HostItem(ip: element.ip)); });
+       (BlocProvider.of<ScanBloc>(context).state as ScanResultState).hosts.forEach((element) {
+         hosts.add(HostItem(ip: element.ip, number: ''));
+       });
     }
 
     super.initState();
@@ -84,7 +86,7 @@ class _ScanScreenState extends State<ScanScreen> {
                 bloc: BlocProvider.of<ScanBloc>(context),
                 builder: (context,state) {
                   if(state is ScanResultState) {
-                    hosts.add(HostItem(ip: state.newHost.ip));
+                    hosts.add(HostItem(ip: state.newHost.ip, number: ''));
                     _listKey.currentState?.insertItem(hosts.length-1, duration: const Duration(milliseconds: 100));
                     return AnimatedList(
                       shrinkWrap: true,

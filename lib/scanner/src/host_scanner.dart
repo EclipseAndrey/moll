@@ -39,7 +39,7 @@ class HostScanner {
 
     for (int i = firstSubnet; i <= lastValidSubnet; i++) {
       final host = '$subnet.$i';
-      final ping = Ping(host, count: 5, timeout: 1,);
+      final ping = Ping(host, count: 5, timeout: 1, );
 
       activeHostsFuture.add(
         _getHostFromPing(
