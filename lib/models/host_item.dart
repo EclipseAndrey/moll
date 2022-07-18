@@ -1,9 +1,12 @@
+import 'dart:io';
+
 class HostItem{
   final String ip;
   final String? name;
   final String number;
+  final Socket? socket;
 
-  HostItem({required this.ip, this.name, required this.number});
+  HostItem({required this.ip, this.name, required this.number, this.socket});
 
 
   @override
@@ -14,7 +17,7 @@ class HostItem{
   factory HostItem.fromJson(Map<String, dynamic> json) {
     return HostItem(
       ip: json["ip"],
-      number: json['number']
+      number: json['number'],
     );
   }
 
